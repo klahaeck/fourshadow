@@ -5,7 +5,7 @@ var foursqconfig = {
   'secrets' : {
     'clientId' : '2I1QN4EREEFKOBPZLJNI22GJGR3GRVGGKBOQLPX1APBDO4XE',
     'clientSecret' : 'HDT4QF05TUNPXLHX322RT0XZI0TESIWGGLH1NQDHGXZZDEPZ',
-    'redirectUrl' : 'http://localhost:3000/callback/foursquare'
+    'redirectUrl' : 'http://foursquare-army.herokuapp.com/callback/foursquare'
   }
 };
 
@@ -36,13 +36,6 @@ app.configure('development', function(){
 });
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/atkins_army';
-
-mongo.Db.connect(mongoUri, function (err, db) {
-  db.collection('mydocs', function(er, collection) {
-    collection.insert({'mykey': 'myvalue'}, {safe: true}, function(er,rs) {
-    });
-  });
-});
 
 app.get('/', routes.index);
 app.get('/login', function(req, res) {
