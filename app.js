@@ -5,7 +5,7 @@ var foursqconfig = {
   'secrets' : {
     'clientId' : '2I1QN4EREEFKOBPZLJNI22GJGR3GRVGGKBOQLPX1APBDO4XE',
     'clientSecret' : 'HDT4QF05TUNPXLHX322RT0XZI0TESIWGGLH1NQDHGXZZDEPZ',
-    'redirectUrl' : 'http://foursquare-army.herokuapp.com/callback/foursquare'
+    'redirectUrl' : 'http://foursquare-army.aws.af.cm/callback/foursquare'
   }
 };
 
@@ -20,7 +20,7 @@ var app = express();
 var mongo = require('mongodb');
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 5000);
+  app.set('port', process.env.PORT || process.env.VCAP_APP_PORT || 5000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
