@@ -1,0 +1,14 @@
+{
+  "name": "foursquare-army",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "latest",
+    "jade": "*",
+    "node-foursquare": "*",
+    "mongodb": "*"
+  }
+}
