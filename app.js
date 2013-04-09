@@ -116,7 +116,7 @@ function checkTarget() {
 }
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Foursquare Army awaiting orders...");
+  console.log("Foursquare Shadow awaiting orders...");
   setInterval(checkTarget, 300000);
   checkTarget();
 });
