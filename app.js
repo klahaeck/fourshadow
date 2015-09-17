@@ -1,11 +1,13 @@
-var masterToken = "UW3JINH0RU0JTZSZHZEL0KDXG0QVQK3D5TB5XNOTTE4W5UPR";
-var targetUser = "1800710"; // Chris Atkins
+var config = require('./config.js');
+
+var masterToken = config.masterToken;
+var targetUser = config.targetUser; // Chris Atkins
 
 var foursqconfig = {
   'secrets' : {
-    'clientId' : '2I1QN4EREEFKOBPZLJNI22GJGR3GRVGGKBOQLPX1APBDO4XE',
-    'clientSecret' : 'HDT4QF05TUNPXLHX322RT0XZI0TESIWGGLH1NQDHGXZZDEPZ',
-    'redirectUrl' : 'http://foursquare-army.aws.af.cm/callback/foursquare'
+    'clientId' : config.foursquare.clientId,
+    'clientSecret' : config.foursquare.clientSecret,
+    'redirectUrl' : config.foursquare.redirectUrl
   }
 };
 
